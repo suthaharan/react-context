@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import {LoginContext} from "../ContextHelpers/LoginContext";
 
 const ChangePassword = () => {
-    const { loggedIn, setLoggedIn } = useContext(LoginContext);
+    const { reducerstate, dispatch } = useContext(LoginContext);
   return (
     <div style={{ color: 'orange', fontFamily:'Tahoma'}}>
-        ChangePassword
-        <h6>{loggedIn? "Logged": "Not logged in!"}</h6>   
-        <button onClick={() => setLoggedIn(!loggedIn)}>Change login status</button>
+        <h1>ChangePassword</h1>
+        <button onClick={() => dispatch("CHANGEPASSWORD")}>Click</button>
+        <h6>Logged In - {reducerstate.logCount}, Changed Password - {reducerstate.cpCount}</h6>   
     </div>
   )
 }
