@@ -1,3 +1,12 @@
+#### Topics
+
+* Global State & Context API
+* Lifting up the State
+* Prop drilling
+* Creating the Context
+* useContext hook
+
+
 #### useContext Hook
 Ref 1 [https://www.youtube.com/watch?v=lnL6gRkQ5g8]
 
