@@ -4,12 +4,14 @@ import {LoginContext} from "../ContextHelpers/LoginContext";
 
 const Login = () => {
 
-  const { loggedIn, setLoggedIn } = useContext(LoginContext);
+  const { reducerstate, dispatch } = useContext(LoginContext);
+  console.log(reducerstate)
   return (
     <div style={{ color: 'yellow', fontFamily:'arial'}}>
         <h1> Login </h1>
-        <button onClick={() => setLoggedIn(!loggedIn)}>Click to Login!</button>
-        <h6>{loggedIn? "Logged": "Not logged in!"}</h6>
+        <button onClick={() => dispatch("LOGIN")}>Click to Login!</button>
+        <h6>Logged In - {reducerstate.logCount}, Changed Password - {reducerstate.cpCount}</h6>   
+        
     </div>
   )
 }
