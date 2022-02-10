@@ -41,3 +41,4 @@ const [loggedIn, dispatch] = useReducer(reducer, initialState);
 ...
 
 ```
+![useReducerExample](gitassets/usereducer.jpg "Final output from useReducer execution")
